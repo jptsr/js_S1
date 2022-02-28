@@ -7,5 +7,11 @@
   console.log('Hello Keller programmer');
 
   // YOUR CODE HERE
+  var wantCake = prompt("Do you want some cake ?", "<Enter you answer here>");
+  if(wantCake === "yes"){
+    alert("Congrats !!!");
+  }else{
+    alert("More cake for me then :p !");
+  }
 })();
 
