@@ -80,6 +80,15 @@
         },
     ];
 
-    // your code here
+    let adult = [];
 
+    // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        for(let i = 0; i < people.length; i++){
+            if(people[i].age > 18){
+                adult.push(people[i]);
+            }
+        }
+        console.log(adult);
+    });
 })();

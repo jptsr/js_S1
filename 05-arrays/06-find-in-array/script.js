@@ -81,5 +81,8 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function(){
+        index = people.findIndex(x => x.firstname === "Jean");
+        console.log(people[8].email + ", index : " + index);
+    });
 })();

@@ -16,5 +16,11 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function(){
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("banana");
+        fruits.push("kiwi");
+        console.log(fruits);
+    });
 })();
