@@ -1,8 +1,6 @@
 
 // 02-maths/05-factorial/script.js - 2.5: Factorial
 
-let asw = 1;
-
 (() => {
     
     // to get the value of an input: document.getElementById("element-id").value
@@ -17,6 +15,7 @@ let asw = 1;
 })();
 
 function factorial(nb){
+    let asw = 1;
     for(let i = 1; i < nb + 1; i++){
         asw *= i;
     }

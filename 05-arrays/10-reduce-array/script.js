@@ -82,5 +82,23 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        // let sum = 0;
 
+        function getSum(total, num) {
+            return total + num;
+        }
+
+        sum = people.reduce(getSum, 'age');
+
+        console.log(sum);
+    });
+
+    // const numbers = [15, 2, 1, 4];
+
+    // function getSum(total, num) {
+    //     return total + num;
+    // }
+
+    // alert(numbers.reduce(getSum));
 })();
