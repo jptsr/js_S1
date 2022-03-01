@@ -19,4 +19,11 @@
         user: null,
     };
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        computers.forEach(element => {
+            // computers.splice(element, 0, defaultProps);
+            element = defaultProps;
+        });
+        console.log(computers);
+    });
 })();
