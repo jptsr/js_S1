@@ -21,8 +21,17 @@
     // your code here
     document.getElementById("run").addEventListener("click", function(){
         computers.forEach(element => {
-            // computers.splice(element, 0, defaultProps);
-            element = defaultProps;
+            if(element.available !== false){
+                element.available = defaultProps.available;
+            }
+
+            if(!element.user){
+                element.user = defaultProps.user;
+            }
+
+            if(!element.os){
+                element.os = defaultProps.os;
+            }
         });
         console.log(computers);
     });
