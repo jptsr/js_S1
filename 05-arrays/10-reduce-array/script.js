@@ -83,22 +83,17 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function(){
-        // let sum = 0;
+        let initialValue = 0;
 
         function getSum(total, num) {
-            return total + num;
+            return total + num.age;
         }
+        // total va prendre en comte tout les éléments du tableau (un peu cô forEach)
+        // num = currentValue
 
-        sum = people.reduce(getSum, 'age');
+        let sum = people.reduce(getSum, initialValue);
+        // contient la valeur initial transmise à la fct
 
         console.log(sum);
     });
-
-    // const numbers = [15, 2, 1, 4];
-
-    // function getSum(total, num) {
-    //     return total + num;
-    // }
-
-    // alert(numbers.reduce(getSum));
 })();

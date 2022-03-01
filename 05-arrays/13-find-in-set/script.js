@@ -15,4 +15,8 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        let hasIt = people.has("Alexandre");
+        console.log(people.size + " " + hasIt);
+    });
 })();

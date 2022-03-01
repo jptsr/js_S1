@@ -31,4 +31,19 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        let newAdj = Array.from(adjectives);
+        let rBirds = random(birds.length);
+        let rAdj = random(newAdj.length);
+
+        if(birds[rBirds].fem == true){
+            console.log(birds[rBirds].name + " " + newAdj[rAdj] + "e");
+        }else{
+            console.log(birds[rBirds].name + " " + newAdj[rAdj]);
+        }
+    });
 })();
+
+function random(a){
+    return Math.floor(Math.random() * a);
+}
