@@ -11,14 +11,16 @@
     // your code here
     class Cat extends Animal {
         constructor(name) {
+            super(name);
             this.name = name;
         }
-        // static greeting = this.sayHello();
+        static greeting = "Hello";
     }
 
-    let c = new Cat().sayHello();
+    let c1 = Cat.greeting;
+    let c = new Cat("Boulet").sayHello(c1);
 
-    document.getElementById("run").addEventListener("click", function(){
+    document.getElementById("run").addEventListener("click", () => { 
         console.log(c);
     });
 })();
