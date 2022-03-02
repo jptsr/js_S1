@@ -12,5 +12,15 @@
     ];
 
     // your code here
-
+    let i = 1;
+    let img = document.body.childNodes[1].childNodes[3].childNodes[3].childNodes[1].childNodes[1];
+    
+    document.getElementById("next").addEventListener("click", () => {
+        console.log(img);
+        img.setAttribute("src", gallery[i]);
+        i++;
+        if(i >= 5){
+            i = 0;
+        }
+    });
 })();
