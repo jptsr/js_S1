@@ -17,52 +17,66 @@
     btn1.addEventListener('click', () => {
         btn1_value++;
         btn1.innerHTML = btn1_value;
-        target.innerHTML = `+${btn1_value}000000`;
 
         if(btn1_value > 498){
             btn1_value = 459;
         }
+
+        display();
     });
 
     btn2.addEventListener('click', () => {
         btn2_value++;
         btn2.innerHTML = `0${btn2_value}`;
-        target.innerHTML = `+${btn1_value}0${btn2_value}0000`;
-
-        if(btn2_value > 9){
-            target.innerHTML = `+${btn1_value}${btn2_value}0000`;
-        }
 
         if(btn2_value > 98){
             btn2_value = -1;
         }
+
+        display();
     });
 
     btn3.addEventListener('click', () => {
         btn3_value++;
         btn3.innerHTML = `0${btn3_value}`;
-        target.innerHTML = `+${btn1_value}0${btn2_value}0${btn3_value}00`;
-
-        if(btn3_value > 9){
-            target.innerHTML = `+${btn1_value}${btn2_value}${btn3_value}00`;
-        }
 
         if(btn3_value > 98){
             btn3_value = -1;
         }
+
+        display();
     });
 
     btn4.addEventListener('click', () => {
         btn4_value++;
         btn4.innerHTML = `0${btn4_value}`;
-        target.innerHTML = `+${btn1_value}0${btn2_value}0${btn3_value}0${btn4_value}`;
-
-        if(btn4_value > 9){
-            target.innerHTML = `+${btn1_value}${btn2_value}${btn3_value}${btn4_value}`;
-        }
 
         if(btn4_value > 98){
             btn4_value = -1;
         }
+
+        display();
     });
+
+    function display(){
+        let value2 = `${btn2_value}`;
+        let value3 = `${btn3_value}`;
+        let value4 = `${btn4_value}`;
+    
+        if(btn2_value < 10){
+            value2 = `0${btn2_value}`;
+        }
+    
+        if(btn3_value < 10){
+            value3 = `0${btn3_value}`;
+        }
+    
+        if(btn4_value < 10){
+            value4 = `0${btn4_value}`;
+        }
+    
+        target.innerHTML = `+${btn1_value}${value2}${value3}${value4}`;
+    }
 })();
+
+
