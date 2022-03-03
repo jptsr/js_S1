@@ -4,15 +4,32 @@
 (() => {
 
     // your code here
+    
     let txt = document.getElementById('target');
-    let p1 = "Woo-hoo!";
-    let p2 = "I'm making waves!";
-    let p3 = "Wéééé!"
-    let p4 = "Oh ...";
-    let p5 = "I think I'm having seasickness ...";
+    txt.innerHTML = '';
 
-    p1.style.fontSize = "16px";
-    p2.style.fontSize = "26px";
+    let span1 = document.createElement("span");
+    span1.style.fontSize = "30px";
+    span1.innerHTML = "Woo-hoo!";
+    txt.appendChild(span1);
 
-    txt.innerHTML = `${p1} ${p2}`;
+    let span2 = document.createElement("span");
+    span2.style.fontSize = "15px";
+    span2.innerHTML = " I'm making waves!";
+    txt.appendChild(span2);
+
+    let span3 = document.createElement("span");
+    span3.style.fontSize = "40px"
+    span3.innerHTML = " Wéééé!";
+    txt.appendChild(span3);
+
+    let span4 = document.createElement("span");
+    span4.style.fontSize = "25px"
+    span4.innerHTML = " Oh ...";
+    txt.appendChild(span4);
+
+    let span5 = document.createElement("span");
+    span5.style.fontSize = "45px"
+    span5.innerHTML = " I think I'm having seasickness ...";
+    txt.appendChild(span5);
 })();
