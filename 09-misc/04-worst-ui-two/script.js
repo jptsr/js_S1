@@ -78,5 +78,3 @@
         target.innerHTML = `+${btn1_value}${value2}${value3}${value4}`;
     }
 })();
-
-
