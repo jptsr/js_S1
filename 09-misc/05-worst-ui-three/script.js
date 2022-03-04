@@ -18,7 +18,7 @@
 
     let time1, time2, time3, time4;
 
-    function rollInputOne(){
+    let rollInputOne = () => {
         input1++;
         time1 = setTimeout(rollInputOne, 50);
     
@@ -31,7 +31,7 @@
         display();
     }
 
-    function rollInputTwo(){
+    let rollInputTwo = () => {
         input2++;
         time2 = setTimeout(rollInputTwo, 50);
 
@@ -44,7 +44,7 @@
         display();
     }
 
-    function rollInputThree(){
+    let rollInputThree = () => {
         input3++;
         time3 = setTimeout(rollInputThree, 50);
 
@@ -57,7 +57,7 @@
         display();
     }
 
-    function rollInputFour(){
+    let rollInputFour = () => {
         input4++;
         time4 = setTimeout(rollInputFour, 50);
 
@@ -95,7 +95,7 @@
         document.getElementById('part-four').value = input4;
     });
 
-    function display(){
+    let display = () => {
         let val2 = `${input2}`;
         let val3 = `${input3}`;
         let val4 = `${input4}`;
@@ -108,7 +108,7 @@
             val3 = `0${input3}`;
         }
     
-        if(input3 < 10){
+        if(input4 < 10){
             val4 = `0${input4}`;
         }
     
