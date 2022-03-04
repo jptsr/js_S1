@@ -3,4 +3,19 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPosts().then((articles) => {
+            for(let i = 0; i < articles.length; i++){
+
+                window.lib.getComments().then((comments) => {
+                    comments.forEach(element => {
+                        articles[i].comment = element;
+                    });
+                });
+
+                console.log(articles[i]);
+            }
+        });
+    });
 })();

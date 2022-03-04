@@ -3,4 +3,14 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        console.clear();
+        
+        window.lib.getPersons().then((value) => {
+            console.log(value);
+        }, (err) => {
+            console.log(err);
+        });
+    });
 })();
