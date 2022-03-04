@@ -3,4 +3,17 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        console.clear();
+        call();
+    });
+
+    async function call(){
+        await window.lib.getPosts().then((articles) => {
+            articles.forEach(element => {
+                return console.log(element);
+            });
+        });
+    }
 })();

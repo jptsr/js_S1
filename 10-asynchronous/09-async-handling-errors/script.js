@@ -3,4 +3,20 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        console.clear();
+
+        let callPersons = async () => {
+            await window.lib.getPersons().then((names) => {
+                names.forEach(element => {
+                    return console.log(element);
+                });
+            }, (err) => {
+                return console.log(err);
+            });
+        }
+
+        callPersons();
+    });
 })();
