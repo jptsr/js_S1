@@ -19,8 +19,10 @@
 
         window.lib.getPosts((pError, pArr) => {
             console.clear();
-    
-            
+
+            pArr.forEach(element => {
+                console.log(element);
+            });            
         });
 
     });

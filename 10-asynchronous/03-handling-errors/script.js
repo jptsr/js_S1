@@ -3,4 +3,18 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        console.clear();
+
+        window.lib.getPersons((err, pArr) => {
+            if(err){
+                console.log(err);
+            }else{
+                pArr.forEach(element => {
+                    console.log(element);
+                });
+            }
+        });
+    });
 })();
