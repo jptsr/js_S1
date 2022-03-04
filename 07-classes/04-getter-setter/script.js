@@ -21,7 +21,7 @@
     }
 
     let p1 = new Person("Boulet", "SauceLapin").getter();
-    let p2 = new Person("Boulet", "SauceLapin").setter();
+    let p2 = new Person("Boulette", "SauceTomate").setter();
 
     document.getElementById("run").addEventListener("click", () => {
         console.log(p1);
