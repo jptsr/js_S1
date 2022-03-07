@@ -6,7 +6,10 @@
 
     const input = document.getElementById('hero-id');
     const btn = document.getElementById('run');
-    let val;
+    const temp = document.getElementById('tpl-hero');
+    const p = document.getElementById('target');
+
+    let val, clone;
 
     btn.addEventListener('click', () => {
         console.clear();
@@ -18,19 +21,39 @@
             .then(data => {
                 switch(val){
                     case '0':
-                        console.log(`X-Men 1: \n- ${data[0].name} \n- ${data[0].alterEgo} \n- ${data[0].abilities}`);
+                        clone = temp.content.cloneNode(true);
+                        clone.querySelector('strong').textContent = `${data[0].name}`;
+                        clone.querySelector('em').textContent = `${data[0].alterEgo}`;
+                        clone.querySelector('p').textContent = `${data[0].abilities}`;
+                        p.appendChild(clone);
                         break;
                     case '1':
-                        console.log(`X-Men 2: \n- ${data[1].name} \n- ${data[1].alterEgo} \n- ${data[1].abilities}`);
+                        clone = temp.content.cloneNode(true);
+                        clone.querySelector('strong').textContent = `${data[1].name}`;
+                        clone.querySelector('em').textContent = `${data[1].alterEgo}`;
+                        clone.querySelector('p').textContent = `${data[1].abilities}`;
+                        p.appendChild(clone);
                         break;
                     case '2':
-                        console.log(`X-Men 3: \n- ${data[2].name} \n- ${data[2].alterEgo} \n- ${data[2].abilities}`);
+                        clone = temp.content.cloneNode(true);
+                        clone.querySelector('strong').textContent = `${data[2].name}`;
+                        clone.querySelector('em').textContent = `${data[2].alterEgo}`;
+                        clone.querySelector('p').textContent = `${data[2].abilities}`;
+                        p.appendChild(clone);
                         break;
                     case '3':
-                        console.log(`X-Men 4: \n- ${data[3].name} \n- ${data[3].alterEgo} \n- ${data[1].abilities}`);
+                        clone = temp.content.cloneNode(true);
+                        clone.querySelector('strong').textContent = `${data[3].name}`;
+                        clone.querySelector('em').textContent = `${data[3].alterEgo}`;
+                        clone.querySelector('p').textContent = `${data[3].abilities}`;
+                        p.appendChild(clone);
                         break;
                     case '4':
-                        console.log(`X-Men 5: \n- ${data[4].name} \n- ${data[4].alterEgo} \n- ${data[4].abilities}`);
+                        clone = temp.content.cloneNode(true);
+                        clone.querySelector('strong').textContent = `${data[4].name}`;
+                        clone.querySelector('em').textContent = `${data[4].alterEgo}`;
+                        clone.querySelector('p').textContent = `${data[4].abilities}`;
+                        p.appendChild(clone);
                         break;
                     default:
                         console.log(`ERROR - try again`);
