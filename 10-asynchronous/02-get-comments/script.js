@@ -3,67 +3,28 @@
 
 (() => {
     // your code here
-    
-    // document.getElementById('run').addEventListener('click', () => {
-
-    //     window.lib.getPosts((pError, pArr) => {
-    //         console.clear();
-    //             pArr(() => {console.log("bonjour");});
-
-    //             // window.lib.getComments((err, comments) => {
-    //             //     comments.forEach(element => {
-    //             //         console.log(element);
-    //             //     });
-    //             // });
-            
-            
-    //     });
-
-    // });
-
-    // document.getElementById('run').addEventListener('click', () => {
-    //     console.clear();
-
-    //     window.lib.getPosts((err, article) => {
-    //         // article.forEach(element => {
-    //         //     element.id;
-    //         //     console.log(element.id);
-    //         // });
-
-    //         for(let i = 0; i < article.length; i++){
-    //             window.lib.getComments((err1, comments) => {
-    //                 console.log(comments);
-    //             });
-    //         }
-    //     });
-    // });
 
     document.getElementById('run').addEventListener('click', () => {
         console.clear();
 
         window.lib.getPosts((pError, pArr) => {
-
-            for(let i = 0; i < pArr.length; i++){
-                //console.log(pArr[i]);
-                // let comment = pArr[i].comments = "5565";
-                // console.log(comment);
-                // console.log(pArr[i]);
-
-                window.lib.getComments( '', (err2, comments) => {
-                    comments.forEach(element => {
-                        console.log(element);
-                        pArr[i].comment = element;
+            if(pError != null){
+                return console.log('ERROR1');
+            }else{
+                pArr.forEach(el => {
+                    window.lib.getComments(el.id, (err2, comments) => {
+                        if(err2 != null){
+                            return console.log('ERROR2');
+                        }else{
+                            comments.forEach(element => {
+                                pArr[el.id].comment = element;
+                                // el.comment = element;
+                            });
+                        }
                     });
+                    console.log(el);
                 });
-
-                console.log(pArr[i]);
-            }  
+            }
         });
-
-        // window.lib.getComments( '', (err2, comments) => {
-        //     comments.forEach(element => {
-        //         console.log(element);
-        //     });
-        // });
     });    
 })();
