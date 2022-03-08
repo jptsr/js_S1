@@ -12,7 +12,7 @@
     btn.addEventListener('click', () => {
         v_id = id.value;
 
-        fetch('http://localhost:3000/heroes', {
+        fetch('http://localhost:3000/heroes' + v_id, {
             // method: 'DELETE'
             method: 'GET'
             
